@@ -5,6 +5,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LanguageIcon from '@mui/icons-material/Language';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { BookmarkBorder, Bookmark } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
 
 
 // Custom Icon Components
@@ -169,10 +170,24 @@ export default function CreatorCard({
   isBookmarked = false,
   onBookmark
 }: CreatorCardProps) {
+  const router = useRouter();
   const isFeatured = featured_until ? new Date(featured_until) > new Date() : false;
 
+  const handleCardClick = () => {
+    router.push(`/creator/${id}`);
+  };
+
   return (
-    <CardWrapper>
+    <CardWrapper
+      onClick={handleCardClick}
+      sx={{ 
+        cursor: 'pointer',
+        '&:hover': {
+          transform: 'translateY(-4px)',
+          transition: 'transform 0.2s ease-in-out',
+        }
+      }}
+    >
       <Box position="relative">
         <ImageContainer>
           <CreatorImage

@@ -163,7 +163,7 @@ const CollapseIcon = () => (
 );
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // Changed from true to false
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [activeItem, setActiveItem] = useState('dashboard');
@@ -173,9 +173,9 @@ const Sidebar = () => {
   const menuItems = [
     { id: 'creators', icon: <PeopleOutlineRoundedIcon />, text: 'Creators & Influencers', path: '/home' },
     { id: 'mylist', icon: <FormatListBulletedOutlinedIcon />, text: 'My List', path: '/list' },
-    { id: 'contact', icon: <MailOutlineRoundedIcon />, text: 'Contact', path: 'https://www.stride-social.com/contact' },
-    { id: 'help', icon: <ContactSupportOutlinedIcon />, text: 'Help & Support', path: '#' },
-    { id: 'terms', icon: <GavelOutlinedIcon />, text: 'Terms & Privacy', path: '#' },
+    { id: 'contact', icon: <MailOutlineRoundedIcon />, text: 'Contact', path: '/contact' },
+    { id: 'help', icon: <ContactSupportOutlinedIcon />, text: 'Help & Support', path: '/help' },
+    { id: 'terms', icon: <GavelOutlinedIcon />, text: 'Terms & Privacy', path: '/terms&privacy' }, // Updated this line
   ];
 
   const handleNavigation = (path: string) => {

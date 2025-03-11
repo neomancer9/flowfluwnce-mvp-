@@ -136,7 +136,7 @@ export default function ListPage() {
                   fontSize: '14px',
                   fontWeight: 500,
                 }}>
-                  Get Started
+                  GET A QUOTE
                 </Typography>
                 <EastIcon sx={{ fontSize: 18 }} />
               </Box>

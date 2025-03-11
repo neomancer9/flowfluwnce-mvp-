@@ -11,8 +11,10 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@getbrevo/brevo": "^2.2.0",
     "@mui/icons-material": "^6.4.6",
     "@mui/material": "^6.4.6",
+    "@sendgrid/mail": "^8.1.4",
     "@supabase/supabase-js": "^2.49.1",
     "next": "15.2.0",
     "react": "^19.0.0",
